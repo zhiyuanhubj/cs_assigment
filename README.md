@@ -1,6 +1,7 @@
 # cs_assigment
 
 ### Query Example
+
 Query: [“疾病“]诊断的检查项目有哪些？请提供给我全面准确的回答。 ## used to validate the performanace of chatgpt
 
 ##used to validate the performance about chatgpt for cypher generation
@@ -9,8 +10,10 @@ Query: [“疾病“]诊断的检查项目有哪些？请提供给我全面准�
 
 [“疾病”]诊断的检查项目有哪些？知识库中存在[“diseases”]和[“checks”]两类实体，他们之间的关系是[“诊断检查”]，请提供给我基于这个知识库查询这个问题的Cypher语句
 
-### Cypher: 
+### Cypher
+
 Math (d: Disease{name: “疾病”})-[:诊断检查]->(diag: checks)
+
 RETURN diag.name
 
 ### Ground_truth: XXXXX, XXXX, XXXX
@@ -23,7 +26,9 @@ RETURN diag.name
 ## Random sampling and select all nodes to construct such data
 
 疾病-诊断检查, 疾病-症状, 疾病-并发症, 疾病-所属科室, 疾病-治疗方法, 疾病-常用药
-How to evaluate:
+
+### How to evaluate:
+
 1 character match
 
 2 Ask ChatGPT again（example below）
